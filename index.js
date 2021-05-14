@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const fs = require('fs');
+const config = require("./config.json");
 var wavConverter = require('wav-converter')
 const client = new Discord.Client();
 let fileName;
@@ -137,7 +138,7 @@ function stopRecording(msg){
     voiceChannel.leave();
 }
 
-client.login('NjA4NTEwNjExMDM0NDcyNDQ4.XUpNqw.D3OzisJpCglWEIXXXXvK9YxOO04');
+client.login(config.discordtoken);
 client.on('ready', () => {
   console.log('ready!');
 });
